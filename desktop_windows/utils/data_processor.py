@@ -7,10 +7,7 @@ def extract_dataset(df_path: str):
 
 
 def remove_rows(df):
-    df.dropna(subset=[df.columns[9]], inplace=True)
-    df.dropna(subset=[df.columns[13]], inplace=True)
-    df.dropna(subset=[df.columns[19]], inplace=True)
-    df.dropna(subset=[df.columns[21]], inplace=True)
+    df.dropna(subset=[df.columns[9, 13, 19, 21]], inplace=True)
     return df
 
 
@@ -29,10 +26,7 @@ def extract_values_by_indexes(df, column_indexes):
 
 def extract_data(df_path):
     df = pd.read_csv(df_path)
-    df.dropna(subset=[df.columns[9]], inplace=True)
-    df.dropna(subset=[df.columns[13]], inplace=True)
-    df.dropna(subset=[df.columns[19]], inplace=True)
-    df.dropna(subset=[df.columns[21]], inplace=True)
+    df.dropna(subset=[df.columns[9, 13, 19, 21]], inplace=True)
     df[df.columns[11]] = df[df.columns[11]].fillna(df[df.columns[10]])                                               
     values_list = []
     for _, row in df.iterrows():

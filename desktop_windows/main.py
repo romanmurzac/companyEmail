@@ -10,7 +10,6 @@ from flaskwebgui import FlaskUI
 # Import internal modules
 from utils import data_processor, logic_processor, mail_processor, pdf_processor
 
-
 # Define program constants
 DATABASE_FILE = ""
 

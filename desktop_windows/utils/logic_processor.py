@@ -12,7 +12,7 @@ def remove_file(directory_path):
     for filename in os.listdir(directory_path):
         file_path = os.path.join(directory_path, filename)
         print(file_path)
-        if filename not in ["also-logo.png", "favicon.ico"]:
+        if filename not in ["company-logo.png", "favicon.ico"]:
             try:
                 if os.path.isfile(file_path) or os.path.islink(file_path):
                     os.unlink(file_path)
