@@ -1,1 +1,2 @@
-venv/
+/V*
+**/__pycache__/
